@@ -25,11 +25,11 @@ export default ({ data }) => {
 }
 
 export const query = graphql`
-  query IndexQuery($tableName: String!) {
+  query IndexQuery("Destinations": String!) {
     hero: file(relativePath: { eq: "hero-travel.jpg" }) {
       ...HeroImageFragment
     }
-    items: allAirtable(filter: { table: { eq: $tableName } }) {
+    items: allAirtable(filter: { table: { eq: "Destinations" } }) {
       nodes {
         data {
           country
