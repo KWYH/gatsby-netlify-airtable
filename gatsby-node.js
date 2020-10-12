@@ -8,7 +8,7 @@ exports.createPages = ({ graphql, actions }) => {
   return new Promise((resolve, reject) => {
     graphql(`
       {
-        allAirtable(filter: { table: { eq: "${tableName}" } }) {
+        allAirtable(filter: { table: { eq: "Destinations" } }) {
           nodes {
             data {
               slug
